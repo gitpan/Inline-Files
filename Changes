@@ -1,0 +1,58 @@
+Revision history for Perl extension Inline::Files.
+
+0.53  Thu May 24 23:51:57 PDT 2001 (INGY)
+	- Removed doc references to diagnostics that were removed in 0.51.
+
+0.52  Fri May 25 15:31:02 EST 2001 (DCONWAY)
+	- Added %WHATEVER mechanism hash to access inline data
+	  about __WHATEVER__
+
+0.52  Fri May 25 13:50:35 EST 2001 (DCONWAY)
+	- Silenced complaint when vf_close used on normal filehandle names
+
+0.52  Fri May 25 13:00:53 EST 2001 (DCONWAY)
+        - Added -backup option to import list
+
+0.51  Mon May 21 13:40:09 PDT 2001 (INGY)
+	- Changed seek() to work more like a real seek in regards to
+	  edge cases. (Actually set to emulate my Linux seek)
+
+0.51  Mon May 21 13:13:39 PDT 2001 (INGY)
+	- Warn instead of croak for user errors. More like real functions.
+
+0.51  Mon May 21 02:08:44 PDT 2001 (INGY)
+	- Create a new Inline File with 'open FILE ">";'
+
+0.51  Mon May 21 02:08:44 PDT 2001 (INGY)
+	- Make file name absolute so chdir() will not cause problems
+
+0.51  Sun May 20 23:38:56 PDT 2001 (INGY)
+	- Added a multi-file test harness that supports writing to files.
+
+0.51  Sun May 20 21:51:49 PDT 2001 (INGY)
+	- Don't croak on save() failure. Just warn if appropriate and return 0.
+	- close() returns value of save().
+
+0.51  Sun May 20 21:37:07 PDT 2001 (INGY)
+	- Set changed flag in the appropriate place
+	- Mode got confused in some contexts
+
+0.51  Thu Mar 22 11:29:06 PST 2001 (INGY)
+	- Save was adding an extra newline to each written file.
+	- NOTE: Inline::Files must always end with a newline
+
+0.51  Thu Mar 22 11:14:11 PST 2001 (INGY)
+	- Fixed list behaviour for PRINT
+
+0.51  Thu Mar 22 11:04:23 PST 2001 (INGY)
+	- Added list context for READLINE
+
+0.51  Wed Mar 21 23:12:54 PST 2001 (INGY)
+	- Fixed weird glob reference bug for threaded perls.
+
+0.50  Thu Mar 15 12:00:50 2001 (DCONWAY)
+	- First draft. Inline::Files and Inline::Files::Virtual are functional.
+
+0.01  Fri Mar  2 06:05:33 2001
+	- original version; created by h2xs 1.18
+
