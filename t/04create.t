@@ -41,3 +41,8 @@ use Inline::Files;
     close FILE;
     ok($text =~ /__MYFILE1__\none\nthree\n__MYFILE2__\ntwo\n$/);
 }
+__MYFILE1__
+one
+three
+__MYFILE2__
+two

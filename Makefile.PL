@@ -1,8 +1,8 @@
 
 use ExtUtils::MakeMaker;
 WriteMakefile(
-		NAME	=> 'Inline::Files',
-		VERSION => '0.60',
+		NAME	=> q[Inline::Files],
+		VERSION => q[0.62],
 	      PREREQ_PM => { Filter::Util::Call => 0 },
 
 	     );

@@ -1,5 +1,5 @@
 ==============================================================================
-                   Release of version 0.60 of Inline::Files
+                   Release of version 0.62 of Inline::Files
 ==============================================================================
 
 
@@ -65,17 +65,15 @@ and is also available from:
 
 ==============================================================================
 
-CHANGES IN VERSION 0.60
+CHANGES IN VERSION 0.62
 
-(No changes have been documented for this version)
+
+
 
 ==============================================================================
 
 AVAILABILITY
 
 Inline::Files has been uploaded to the CPAN
-and is also available from:
-
-	http://www.csse.monash.edu.au/~damian/CPAN/Inline-Files.tar.gz
 
 ==============================================================================

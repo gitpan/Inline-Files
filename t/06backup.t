@@ -51,4 +51,5 @@ close \*MYFILE;
 unlink "$0.bak";
 
 __MYFILE__
-Old stuff
+New stuff
+

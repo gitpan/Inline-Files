@@ -1,5 +1,12 @@
 Revision history for Perl extension Inline::Files.
 
+0.62  Tue May 27 23:35:53 GMT 2003 (DCONWAY)
+	- Fixed signature of vf_truncate
+
+0.61  Sun Jun 17 05:48:49 EST 2001 (DCONWAY)
+	- Reinstated Ingy's workaround for desymbolization of globs
+	  under threaded perls
+
 0.53  Thu May 24 23:51:57 PDT 2001 (INGY)
 	- Removed doc references to diagnostics that were removed in 0.51.
 
@@ -55,4 +62,8 @@ Revision history for Perl extension Inline::Files.
 
 0.01  Fri Mar  2 06:05:33 2001
 	- original version; created by h2xs 1.18
+
+
+
+0.62	Tue May 27 23:36:55 2003
 

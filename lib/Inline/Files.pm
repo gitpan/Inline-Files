@@ -1,5 +1,5 @@
 package Inline::Files;
-$VERSION = '0.60';
+$VERSION = '0.62';
 use strict;
 
 use Inline::Files::Virtual;
@@ -172,8 +172,8 @@ Inline::File - Multiple virtual files at the end of your code
 
 =head1 VERSION
 
-This document describes version 0.60 of Inline::Files,
-released May 26, 2001.
+This document describes version 0.62 of Inline::Files,
+released May 27, 2003.
 
 =head1 SYNOPSIS
 
@@ -206,9 +206,11 @@ that use it. To protect yourself against this possibility, you are
 I<strongly> advised to use the C<-backup> option described in
 L<"Safety first">.
 
-If you I<don't> use C<-backup> and this module subsequently nukes
-your program, the authors will under no circumstances be held responsible
-for your unfortunate loss.
+This module is still experimental. Regardless of whether you use
+C<-backup> or not, by using this module you agree that the authors will
+b<under no circumstances> be responsible for any loss of data, code,
+time, money, or limbs, or for any other disadvantage incurred as a
+result of using Inline::Files.
 
 =head1 DESCRIPTION
 

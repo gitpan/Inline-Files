@@ -104,7 +104,7 @@ sub vf_open (*;$$) {
 	$glob = caller() . "::$glob" unless ref($glob) || $glob =~ /::/;
 # The following line somehow manages to cause failure on threaded perls.
 # The good news is that everything works just fine without it.
-	$glob = \*{$glob};
+	# $glob = \*{$glob};
     }
     else {	# autovivify for: open $fh, $filename
 	$glob = $_[0] = \do{local *ANON};
@@ -238,7 +238,7 @@ sub vf_tell (*) {
     return $impl->TELL();
 }
 
-sub vf_truncate (*) {
+sub vf_truncate (*$) {
     DEBUG && TRACE(@_);
     my ($glob, $length) = @_;
     no strict;
@@ -449,14 +449,14 @@ This document describes version 0.53 of Inline::Files::Virtual, released May 25,
     
 =head1 WARNING
 
-Careless use of this module will almost certainly cause the source code
-in files that use it to be overwritten. You are I<strongly> advised to
-use the Inline::Files module instead.
+This module is still experimental. Careless use of it will almost
+certainly cause the source code in files that use it to be overwritten.
+You are I<strongly> advised to use the Inline::Files module instead.
 
-If you chose to use this module anyway, the authors will I<under no
-circumstances> be held responsible for lost source code.
-
-In fact, they will laugh about it. Cruelly.
+If you chose to use this module anyway, you thereby agree that the
+authors will b<under no circumstances> be responsible for any loss of
+data, code, time, money, or limbs, or for any other disadvantage incurred
+as a result of using Inline::Files.
 
 
 =head1 DESCRIPTION
