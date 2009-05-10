@@ -1,5 +1,5 @@
 package Inline::Files;
-$VERSION = '0.62';
+$VERSION = '0.63';
 use strict;
 
 use Inline::Files::Virtual;
@@ -168,12 +168,12 @@ __END__
 
 =head1 NAME
 
-Inline::File - Multiple virtual files at the end of your code
+Inline::Files - Multiple virtual files at the end of your code
 
 =head1 VERSION
 
-This document describes version 0.62 of Inline::Files,
-released May 27, 2003.
+This document describes version 0.63 of Inline::Files,
+released May 10, 2009.
 
 =head1 SYNOPSIS
 
@@ -424,6 +424,10 @@ The Inline::Files::Virtual module
 
 The Filter::Util::Call module
 
+=head2 BUGS ADDED BY
+
+Alberto Simoes  (ambs@cpan.org)
+
 =head1 UNWITTING PAWN OF AN AUTHOR
 
 Damian Conway  (damian@conway.org)
@@ -434,7 +438,7 @@ Brian Ingerson (INGY@cpan.org)
 
 =head1 COPYRIGHT
 
-Copyright (c) 2001. Damian Conway. All rights reserved.
+Copyright (c) 2001-2009. Damian Conway. All rights reserved.
 
 This module is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 

@@ -32,8 +32,12 @@ use Inline::Files;
     open FILE, $0;
     my $text = <FILE>;
     close FILE;
-    ok($text !~ /__MYFILE__\nNew stuff\n$/);
+    skip(
+         $> == 0 ? "Skip if run by superuser" : 0,
+         $text !~ /__MYFILE__\nNew stuff\n$/
+        );
 }
 
 __MYFILE__
-Old stuff
+New stuff
+

@@ -29,3 +29,4 @@ tests/04create.t
 tests/05seek.t
 tests/06backup.t
 tests/07hash.t
+META.yml                                 Module meta-data (added by MakeMaker)

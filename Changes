@@ -1,5 +1,9 @@
 Revision history for Perl extension Inline::Files.
 
+0.63  Sun May 10 17:02:02 WEST 2009 (AMBS)
+	- Fixed test 03nowrite.t to success if run by root.
+        - Corrected module name in the documentation
+
 0.62  Tue May 27 23:35:53 GMT 2003 (DCONWAY)
 	- Fixed signature of vf_truncate
 
