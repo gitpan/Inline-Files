@@ -1,5 +1,9 @@
 Revision history for Perl extension Inline::Files.
 
+0.64  Mon Jan 31 10:53:23 WET 2011 (AMBS)
+        - Support open with pipes (not for virtual files).
+          Fixes #44692.
+
 0.63  Sun May 10 17:02:02 WEST 2009 (AMBS)
 	- Fixed test 03nowrite.t to success if run by root.
         - Corrected module name in the documentation

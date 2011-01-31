@@ -96,24 +96,41 @@ sub vf_load {
 }
 
 my $new_counter = 0;
-sub vf_open (*;$$) {
+sub vf_open (*;$$$) {
     DEBUG && TRACE(@_);
-    my ($glob, $file, $symbol) = @_;
+    my $glob   = shift;
+    my $file   = shift;
+    my $symbol = shift;
+
+    my $mode;
+    if ($file && $file =~ /^(?:\|-|-\||>|<|>>|>:.*)$/) {
+        $mode = $file;
+        $file = $symbol;
+        $symbol = shift;
+    }
+
     no strict;
     if (defined $glob) {
 	$glob = caller() . "::$glob" unless ref($glob) || $glob =~ /::/;
-# The following line somehow manages to cause failure on threaded perls.
-# The good news is that everything works just fine without it.
+        # The following line somehow manages to cause failure on threaded perls.
+        # The good news is that everything works just fine without it.
 	# $glob = \*{$glob};
     }
-    else {	# autovivify for: open $fh, $filename
+    else {
+	# autovivify for: open $fh, $filename
 	$glob = $_[0] = \do{local *ANON};
     }
 
-    # Resolve file
-    $file ||= "";
-    $file =~ s/^([^\w\s\/]*)\s*//i;
-    my $mode = $1 || "";
+    if (!$mode) {
+        # Resolve file
+        $file ||= "";
+        $file =~ s/^([^\w\s\/]*)\s*//i;
+        $mode = $1 || "";
+
+        if (!$mode && $file =~ s/\s*\|\s*$//) {
+            $mode = $mode || "-|";
+        }
+    }
     unless ($file) {
         my $scalar = *{$glob}{SCALAR};
         $file = $scalar ? $$scalar : "";
@@ -145,8 +162,9 @@ sub vf_open (*;$$) {
 
     $! = 2, return 0 unless $file; # Can't work at this point; confuses core
     # Default to CORE::open
-    return CORE::open($glob, "$mode$file")
-      unless exists $vfs{$file};
+    unless (exists $vfs{$file}) {
+        return CORE::open($glob, $mode, $file);
+    }
 
     my $afile = $file =~ /^(.*)[(](NEW)?\d+[)]$/ ? $1 :
       croak "Internal error\n";

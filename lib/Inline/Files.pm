@@ -1,5 +1,5 @@
 package Inline::Files;
-$VERSION = '0.63';
+$VERSION = '0.64';
 use strict;
 
 use Inline::Files::Virtual;
@@ -51,11 +51,11 @@ sub import {
 	tie %$fq_symbol, $class."::Data", $impl;
     }
 
-    foreach (qw( open close seek tell truncate write )) { 
+    foreach (qw( open close seek tell truncate write )) {
         no strict 'refs';
         *{"CORE::GLOBAL::$_"} = \&{"vf_$_"};
     }
-    
+
     ($source = vf_prefix($file)) =~ s/(.*\n){$line}//;
     filter_add( sub {
         return 0 unless $source;
@@ -172,8 +172,8 @@ Inline::Files - Multiple virtual files at the end of your code
 
 =head1 VERSION
 
-This document describes version 0.63 of Inline::Files,
-released May 10, 2009.
+This document describes version 0.64 of Inline::Files,
+released January 31, 2011.
 
 =head1 SYNOPSIS
 

@@ -39,5 +39,4 @@ use Inline::Files;
 }
 
 __MYFILE__
-New stuff
-
+Old stuff
