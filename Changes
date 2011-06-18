@@ -1,5 +1,8 @@
 Revision history for Perl extension Inline::Files.
 
+0.65  Sat Jun 18 11:44:02 WEST 2011 (AMBS)
+        - Require 'Test' for better debugging.
+
 0.64  Mon Jan 31 10:53:23 WET 2011 (AMBS)
         - Support open with pipes (not for virtual files).
           Fixes #44692.

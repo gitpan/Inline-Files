@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Inline-Files
-version:            0.64
+version:            0.65
 abstract:           ~
 author:  []
 license:            unknown
@@ -11,11 +11,12 @@ build_requires:
     ExtUtils::MakeMaker:  0
 requires:
     Filter::Util::Call:  0
+    Test:                0
 no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+generated_by:       ExtUtils::MakeMaker version 6.57_05
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
