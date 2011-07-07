@@ -2,10 +2,11 @@
 use ExtUtils::MakeMaker;
 WriteMakefile(
               NAME	=> q[Inline::Files],
-              VERSION   => q[0.65],
+              VERSION   => q[0.66],
 	      PREREQ_PM => {
                             Filter::Util::Call => 0,
                             Test               => 0,
+                            Cwd                => 0,
                            },
 
 	     );

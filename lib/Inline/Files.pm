@@ -1,5 +1,5 @@
 package Inline::Files;
-$VERSION = '0.65';
+$VERSION = '0.66';
 use strict;
 
 use Inline::Files::Virtual;

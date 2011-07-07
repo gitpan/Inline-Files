@@ -1,7 +1,6 @@
 # -*- cperl -*-
 use lib qw(./blib/lib ../blib/lib);
 use strict;
-use diagnostics;
 BEGIN { $| = 1; print "1..12\n"; }
 use Inline::Files;
 
