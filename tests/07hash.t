@@ -1,7 +1,6 @@
 use lib qw(./blib/lib ../blib/lib);
 use strict;
-use Test;
-use diagnostics;
+use Test::More;
 
 BEGIN {
     plan(tests => 12,
@@ -21,15 +20,15 @@ use vars '%MYFILE';
     ok($MYFILE{writable});
     ok(!defined $MYFILE{other});
     open MYFILE;
-    ok($MYFILE{file} =~ /07hash.t$/);
-    ok($MYFILE{line} == 35);
-    ok($MYFILE{offset} == 657);
+    like($MYFILE{file} => qr/07hash.t$/);
+    is($MYFILE{line} => 34);
+    is($MYFILE{offset} => 654);
     ok($MYFILE{writable});
     ok(!eval{ $MYFILE{writable}=0; 1 });
     ok(!defined $MYFILE{other});
     my $text = <MYFILE>;
     close MYFILE;
-    ok($text =~ /Old stuff\n$/);
+    like($text => qr/Old stuff\n$/);
 }
 
 __MYFILE__

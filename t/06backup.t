@@ -1,7 +1,6 @@
 use lib qw(./blib/lib ../blib/lib);
 use strict;
 use Test;
-use diagnostics;
 
 BEGIN {
     plan(tests => 4,

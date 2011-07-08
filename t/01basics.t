@@ -1,6 +1,5 @@
 use lib qw(./blib/lib ../blib/lib);
 use strict;
-use diagnostics;
 BEGIN { $| = 1; print "1..9\n"; }
 use Inline::Files;
 my $loaded = 1;

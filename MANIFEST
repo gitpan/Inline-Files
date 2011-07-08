@@ -30,4 +30,5 @@ tests/05seek.t
 tests/06backup.t
 tests/07hash.t
 t/08coreopen.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

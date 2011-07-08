@@ -1,5 +1,8 @@
 Revision history for Perl extension Inline::Files.
 
+0.67  Fri Jul 8  12:33:03 WEST 2011 (AMBS)
+	- Getting rid of 'diagnostics' (really!)
+
 0.66  Thu Jul 7  12:33:03 WEST 2011 (AMBS)
 	- Getting rid of 'diagnostics'
       (thanks to Sawyer X for the help)
