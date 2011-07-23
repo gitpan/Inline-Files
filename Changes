@@ -1,10 +1,13 @@
 Revision history for Perl extension Inline::Files.
 
+0.68  Sat Jul 23 19:45:01 WEST 2011 (AMBS)
+    - Use 'VERSION_FROM' and 'ABSTRACT_FROM' on Makefile.PL
+
 0.67  Fri Jul 8  12:33:03 WEST 2011 (AMBS)
-	- Getting rid of 'diagnostics' (really!)
+    - Getting rid of 'diagnostics' (really!)
 
 0.66  Thu Jul 7  12:33:03 WEST 2011 (AMBS)
-	- Getting rid of 'diagnostics'
+    - Getting rid of 'diagnostics'
       (thanks to Sawyer X for the help)
 
 0.65  Sat Jun 18 11:44:02 WEST 2011 (AMBS)

@@ -1,5 +1,5 @@
 {
-   "abstract" : "unknown",
+   "abstract" : "Multiple virtual files at the end of your code",
    "author" : [
       "unknown"
    ],
@@ -39,5 +39,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.67"
+   "version" : "0.68"
 }

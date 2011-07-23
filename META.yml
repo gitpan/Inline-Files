@@ -1,5 +1,5 @@
 ---
-abstract: unknown
+abstract: 'Multiple virtual files at the end of your code'
 author:
   - unknown
 build_requires:
@@ -21,4 +21,4 @@ requires:
   Cwd: 0
   Filter::Util::Call: 0
   Test: 0
-version: 0.67
+version: 0.68

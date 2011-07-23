@@ -1,5 +1,5 @@
 package Inline::Files;
-$VERSION = '0.67';
+$VERSION = '0.68';
 use strict;
 
 use Inline::Files::Virtual;
@@ -172,8 +172,8 @@ Inline::Files - Multiple virtual files at the end of your code
 
 =head1 VERSION
 
-This document describes version 0.64 of Inline::Files,
-released January 31, 2011.
+This document describes version 0.68 of Inline::Files,
+released July 23, 2011.
 
 =head1 SYNOPSIS
 
